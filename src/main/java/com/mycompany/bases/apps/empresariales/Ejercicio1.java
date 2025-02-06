@@ -26,7 +26,7 @@ public class Ejercicio1 {
             System.out.println(numero + " no es primo.");
         }
 
-        sc.close();
+        
 
         System.out.println("-----------------------------------------------------------------");
         System.out.println("Ejercicio 1.2 Numero Max y Min");
@@ -49,11 +49,11 @@ public class Ejercicio1 {
                 minimo = listaNumeros[i];
             }
         }
-        
+
         System.out.println("La lista de numeros aleatorios es:");
         for (int i = 0; i < listaNumeros.length; i++) {
             System.out.print(listaNumeros[i] + ", ");
-            
+
         }
         System.out.println(" ");
         // Imprimimos el máximo y el mínimo
@@ -61,9 +61,23 @@ public class Ejercicio1 {
         System.out.println("El número mínimo es: " + minimo);
 
         System.out.println("-----------------------------------------------------------------");
+        System.out.println(" ");
+        System.out.println("Ejercicio 1.3 Palindromos");
+        System.out.println("Ingrese una palabra");
+        sc.nextLine();
+        String palabra = sc.nextLine();
+        
+        String palabraInvertida = new StringBuilder(palabra).reverse().toString();
+        System.out.println(palabraInvertida);
+        if(palabra.equals(palabraInvertida)){
+            System.out.println(palabra + " es una palabra palindroma");
+        }else{
+            System.out.println(palabra + " NO es una palabra palindroma");
+        }
+        sc.close();
+
     }
 
-    
     public static boolean esPrimo(int num) {
         if (num <= 1) {
             return false;
